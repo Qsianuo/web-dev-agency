@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>星辰科技 - 网站定制开发服务平台</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#/" class="nav-logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">星辰科技</span>
+      </a>
+      <button class="nav-toggle" id="navToggle">☰</button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#/" class="nav-link" data-page="home">首页</a></li>
+        <li><a href="#/packages" class="nav-link" data-page="packages">服务套餐</a></li>
+        <li><a href="#/login" class="nav-link" data-page="login">登录</a></li>
+        <li><a href="#/member" class="nav-link" data-page="member">会员中心</a></li>
+        <li><a href="#/admin" class="nav-link" data-page="admin">管理后台</a></li>
+      </ul>
+      <div class="nav-user" id="navUser">
+        <a href="#/login" class="btn btn-sm btn-outline" id="loginBtn">登录</a>
+        <a href="#/member" class="btn btn-sm btn-primary" id="memberBtn" style="display:none;">会员中心</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面内容 -->
+  <main class="main-content" id="mainContent">
+    <div class="loading-page" id="loadingPage">
+      <div class="spinner"></div>
+      <p>加载中...</p>
+    </div>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>星辰科技</h4>
+          <p>专注网站定制开发、小程序开发、系统开发，为您提供一站式数字化解决方案。</p>
+        </div>
+        <div class="footer-col">
+          <h4>服务项目</h4>
+          <ul>
+            <li><a href="#/packages">企业官网定制</a></li>
+            <li><a href="#/packages">小程序开发</a></li>
+            <li><a href="#/packages">系统开发</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>联系方式</h4>
+          <ul>
+            <li>电话：138-0000-0000</li>
+            <li>微信：starkj_dev</li>
+            <li>邮箱：contact@starkj.com</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>关注我们</h4>
+          <div class="footer-qrcode">
+            <div class="qrcode-placeholder">微信扫码咨询</div>
+            <p>获取专属方案报价</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 星辰科技. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 全局弹窗 -->
+  <div class="modal-overlay" id="modalOverlay" style="display:none;">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modalTitle">提示</h3>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="closeModal()">确定</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast 提示 -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

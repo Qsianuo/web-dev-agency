@@ -1,0 +1,17 @@
+# 依赖
+node_modules/
+
+# 本地运行时数据库
+data/*.db
+
+# 本地 AI 助手配置与命令历史
+.claude/
+
+# 本机工具脚本（包含本机路径/主机名）
+mssql-mcp-server.cjs
+sql-query.cjs
+
+# 日志与系统文件
+*.log
+.DS_Store
+Thumbs.db
