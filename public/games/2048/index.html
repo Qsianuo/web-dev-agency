@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>2048 · 小游戏</title>
+    <meta name="description" content="一个简单、离线可玩的 2048 小游戏。" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game">
+      <header class="top">
+        <div class="title-block">
+          <h1>2048</h1>
+          <p class="subtitle">合并相同数字，挑战 2048</p>
+        </div>
+        <div class="scores">
+          <div class="score-box">
+            <span>得分</span>
+            <strong id="score" aria-live="polite">0</strong>
+          </div>
+          <div class="score-box">
+            <span>最高</span>
+            <strong id="best">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <div class="toolbar">
+        <p class="hint">方向键 / WASD / 滑动屏幕</p>
+        <div class="actions">
+          <button type="button" id="undo" class="btn ghost" disabled>撤销</button>
+          <button type="button" id="new-game" class="btn">新游戏</button>
+        </div>
+      </div>
+
+      <div class="board-wrap">
+        <div class="board" id="board" role="grid" aria-label="2048 棋盘"></div>
+
+        <div class="overlay hidden" id="overlay" role="dialog" aria-modal="true" aria-labelledby="overlay-title">
+          <div class="overlay-card">
+            <h2 id="overlay-title">游戏结束</h2>
+            <p id="overlay-text">没有可以移动的方块了。</p>
+            <div class="overlay-actions">
+              <button type="button" id="overlay-primary" class="btn">再来一局</button>
+              <button type="button" id="overlay-secondary" class="btn ghost">重新开始</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="footnote">
+        相同数字相撞会合并；每一步后随机出现一个 <b>2</b> 或 <b>4</b>。最高分保存在本机。
+      </p>
+    </main>
+
+    <script src="logic.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
